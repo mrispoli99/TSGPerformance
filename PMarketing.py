@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 
 # --- CONFIGURATION ---
-COMPANY_LIST = ["Pick Name Here", "Summer Fridays", "Thrive", "Trinity Solar", "ATI", "Rough Country"]
+COMPANY_LIST = ["Pick Company Name Here", "Summer Fridays", "Thrive", "Trinity Solar", "ATI", "Rough Country"]
 
 st.set_page_config(page_title="TSG Performance Marketing Data Entry", page_icon="📈")
 
@@ -111,4 +111,5 @@ if check_password():
                 conn.update(worksheet="Sheet1", data=updated_df)
                 
                 st.success(f"Success! Data for **{company}** saved.")
+
                 st.cache_data.clear()
